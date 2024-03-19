@@ -1,43 +1,32 @@
-const Sidebar = () => {
+const Sidebar = ({selectedTab, setSelectedTab}) => {
+
     return (
       
-      <div className="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary sidebar" style={{ width: "280px" }}>
+      <div className="d-flex flex-column flex-shrink-0 p-3 sidebar bg-dark" style={{ width: "280px" }}>
       <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <svg className="bi pe-none me-2" width="40" height="32"><use xlinkHref="#bootstrap" /></svg>
-        <span className="fs-4">Sidebar</span>
+        <span className="fs-4 text-white">Sidebar</span>
       </a>
       <hr />
       <ul className="nav nav-pills flex-column mb-auto">
-        <li className="nav-item">
-          <a href="#" className="nav-link active" aria-current="page">
+        <li className="nav-item" 
+          onClick={() => {
+          setSelectedTab("Home");
+          }}>
+          <a href="#" className={`nav-link text-white ${selectedTab === "Home" && "active"}`} aria-current="page">
             <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home" /></svg>
             Home
           </a>
         </li>
-        <li>
-          <a href="#" className="nav-link link-body-emphasis">
-            <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2" /></svg>
-            Dashboard
+        <li onClick={() => {
+          setSelectedTab("Create Post");
+          }}>
+          <a href="#" className={`nav-link text-white ${selectedTab === "Create Post" && "active"}`}>
+            <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home" /></svg>
+            Create Post
           </a>
         </li>
-        <li>
-          <a href="#" className="nav-link link-body-emphasis">
-            <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#table" /></svg>
-            Orders
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav-link link-body-emphasis">
-            <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#grid" /></svg>
-            Products
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav-link link-body-emphasis">
-            <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#people-circle" /></svg>
-            Customers
-          </a>
-        </li>
+       
       </ul>
       <hr />
       <div className="dropdown">
