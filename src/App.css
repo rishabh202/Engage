@@ -1,31 +1,28 @@
-.appContainer{
-    display: flex;
+.appContainer {
+  display: flex;
 }
 
-.appContent{
-    width: 100%;
+.appContent {
+  width: 100%;
 }
 
-.sidebar{
-min-height: 500px;
-
+.sidebar {
+  min-height: 500px;
 }
 
-.postcard{
-    margin: 20px 50px;
-    
+.postcard {
+  margin: 20px 50px;
 }
 
-.hashtag{
-    margin: 0px 5px;
+.hashtag {
+  margin: 0px 5px;
 }
 
-.reactions{
-    margin: 10px 0px 0px 0px;
+.reactions {
+  margin: 10px 0px 0px 0px;
 }
-.create-post{
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 50px;
-    
+.create-post {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 50px;
 }
